@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyrus Bryan Bonete - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Cy</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1>Cyrus Bryan Bonete</h1>
+            <p class="hero-subtitle">Rookie Developer</p>
+            <a href="#portfolio" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content">
+             <div class="about-image fade-in"></div>
+                <div class="about-text fade-in">
+                    <h3>Creating Digital Experiences</h3>
+                    <p>I am Cyrus Bryan D. Bonete, a TVL-ICT student with a strong interest in web development and a career goal of becoming a front-end developer, and eventually a full-stack developer. I value teamwork, communication, and creativity, and I am known for being hardworking, detail-oriented, innovative, and a fast learner with leadership skills.</p>
+                    <p>In school, I have worked on projects such as the Musa Fireball, which integrated Arduino technology. This experience strengthened both my technical abilities and problem-solving skills.</p>
+                    <p>My short-term goal is to finish my degree and continue developing my knowledge and skills in ICT. I aim to grow into a professional who contributes practical and innovative solutions in the tech industry.</p>
+                    <a href="#contact" class="cta-button">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <h4>Frontend Development</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                    <p>CSS, JavaScript, HTML5</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <h4>Backend Development</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="60%"></div>
+                    </div>
+                    <p>Node.js, Python, PHP, MongoDB, MySQL</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <h4>UI/UX Design</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                    <p>Adobe XD, Photoshop</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <h4>DevOps & Tools</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="65%"></div>
+                    </div>
+                    <p>Git, Linux</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title fade-in">Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in" onclick="openProject('ecommerce')">
+                    <div class="portfolio-image">🛒</div>
+                    <div class="portfolio-info">
+                        <h4>E-Commerce Platform</h4>
+                        <p>Full-stack e-commerce solution with React and Node.js</p>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" onclick="openProject('dashboard')">
+                    <div class="portfolio-image">📊</div>
+                    <div class="portfolio-info">
+                        <h4>Analytics Dashboard</h4>
+                        <p>Real-time data visualization dashboard with D3.js</p>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" onclick="openProject('mobile')">
+                    <div class="portfolio-image">📱</div>
+                    <div class="portfolio-info">
+                        <h4>Mobile App</h4>
+                        <p>Cross-platform mobile app built with React Native</p>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" onclick="openProject('website')">
+                    <div class="portfolio-image">🌐</div>
+                    <div class="portfolio-info">
+                        <h4>Corporate Website</h4>
+                        <p>Modern corporate website with CMS integration</p>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" onclick="openProject('api')">
+                    <div class="portfolio-image">🔧</div>
+                    <div class="portfolio-info">
+                        <h4>REST API</h4>
+                        <p>Scalable REST API with authentication and documentation</p>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" onclick="openProject('game')">
+                    <div class="portfolio-image">🎮</div>
+                    <div class="portfolio-info">
+                        <h4>Web Game</h4>
+                        <p>Interactive browser game built with JavaScript and Canvas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form fade-in">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit" onclick="sendMessage()">Send Message</button>
+                </div>
+                <div class="contact-info fade-in">
+                    <h4>Let's Work Together</h4>
+                    <p>I'm always interested in hearing about new projects and opportunities. Whether you're a company looking to hire, or you're someone with an interesting project, I'd love to hear from you.</p>
+                    <div class="contact-links">
+                        <a href="mailto:cyrus@example.com" class="contact-link">✉</a>
+                        <a href="https://linkedin.com" class="contact-link">💼</a>
+                        <a href="https://github.com" class="contact-link">💻</a>
+                        <a href="https://twitter.com" class="contact-link">🐦</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cyrus Bryan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
